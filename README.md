@@ -2,6 +2,9 @@
 Weather app to display for weather for searched city in react native using https://www.weatherapi.com/.
 
 
+https://github.com/alihussnain-git/weather-app/assets/58841397/a5a067da-1b2f-4815-92ef-1f885d07853a
+
+
 ## Prerequisites
 
 Make sure you have completed the [React Native - Environment Setup](https://reactnative.dev/docs/environment-setup)
