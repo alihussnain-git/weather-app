@@ -1,17 +1,17 @@
 import React from 'react';
 import {render, waitFor, fireEvent} from '@testing-library/react-native';
-import {useWeatherForecast as mockUseCityWeather} from '../../react-query/useWeatherForecast';
+import {useWeatherForecast as mockUseWeatherForecast} from '../../react-query/useWeatherForecast';
 import SearchWeatherScreen from './SearchWeatherScreen';
 import {mockWeatherData} from '../../mocks/mockWeatherData';
 import {strings} from '../../locale/strings';
 import TestId from '../../utils/testId';
 
-jest.mock('../../react-query/useCityWeather');
+jest.mock('../../react-query/useWeatherForecast');
 
 describe('SearchWeatherScreen', () => {
   beforeEach(() => {
-    // Mock the useCityWeather hook with sample data
-    (mockUseCityWeather as jest.Mock).mockReturnValue({
+    // Mock the useWeatherForecast hook with sample data
+    (mockUseWeatherForecast as jest.Mock).mockReturnValue({
       data: mockWeatherData,
       isLoading: false,
       isSuccess: true,
@@ -39,7 +39,7 @@ describe('SearchWeatherScreen', () => {
   });
 
   it('renders loading indicator while fetching data', async () => {
-    (mockUseCityWeather as jest.Mock).mockReturnValue({
+    (mockUseWeatherForecast as jest.Mock).mockReturnValue({
       data: null,
       isLoading: true,
       isSuccess: false,
